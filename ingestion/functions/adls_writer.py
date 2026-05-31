@@ -69,7 +69,7 @@ class ADLSWriter:
         self.client       = BlobServiceClient.from_connection_string(connection_string)
         self.account_name = account_name
 
-        logger.info(f"ADLSWriter initialised — connected to {account_name}")
+        logger.info(f"ADLSWriter initialised — connected to {account_name}")    
 
 
     def _build_partition_path(

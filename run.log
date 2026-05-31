@@ -1,0 +1,511 @@
+2026-05-31 13:51:07,767 — INFO — ADLSWriter initialised — connected to energygridstoragetr
+2026-05-31 13:51:07,767 — INFO — EIAIngestor initialised
+2026-05-31 13:51:07,767 — INFO — Tracking 13 grid regions
+2026-05-31 13:51:07,767 — INFO — Tracking 8 fuel types
+2026-05-31 13:51:07,767 — INFO — ============================================================
+2026-05-31 13:51:07,767 — INFO — Starting full ingestion run for 2026-05-31T17 UTC
+2026-05-31 13:51:07,767 — INFO — Regions: ['ERCO', 'CALI', 'PJM', 'MISO', 'NYIS', 'ISNE', 'SWPP', 'BPAT', 'SOCO', 'TVA', 'DUK', 'FPL', 'SC']
+2026-05-31 13:51:07,767 — INFO — ============================================================
+2026-05-31 13:51:07,767 — INFO — Starting ingestion — ERCO (Electric Reliability Council of Texas) for 2026-05-31T17
+2026-05-31 13:51:08,801 — INFO — Latest available hour for ERCO: 2026-05-31T04
+2026-05-31 13:51:08,801 — INFO — ERCO data is 13h behind — using latest available: 2026-05-31T04
+2026-05-31 13:51:08,803 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D31/region%3DERCO/hour%3D04/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'afafbbd2-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:09,009 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7123'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:22 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF445A6CCBAC"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae65fb-b01e-0040-112e-f1a7c2000000'
+    'x-ms-client-request-id': 'afafbbd2-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:08 GMT'
+2026-05-31 13:51:09,010 — INFO — File already exists for ERCO 2026-05-31T04 — skipping
+2026-05-31 13:51:09,010 — INFO — Starting ingestion — CALI (California ISO) for 2026-05-31T17
+2026-05-31 13:51:09,939 — WARNING — Could not determine latest hour for CALI — defaulting to 24 hours ago
+2026-05-31 13:51:09,939 — INFO — CALI data is 23h behind — using latest available: 2026-05-30T18
+2026-05-31 13:51:09,941 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D30/region%3DCALI/hour%3D18/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b05d5b0c-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:09,992 — INFO — Response status: 404
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae6702-b01e-0040-4f2e-f1a7c2000000'
+    'x-ms-client-request-id': 'b05d5b0c-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Sun, 31 May 2026 18:51:09 GMT'
+2026-05-31 13:51:11,085 — INFO — Demand — CALI 2026-05-30T18: 0 records
+2026-05-31 13:51:12,206 — INFO — Generation — CALI 2026-05-30T18: 0 fuel type records
+2026-05-31 13:51:12,410 — WARNING — No records returned for CALI at 2026-05-30T18
+2026-05-31 13:51:12,413 — WARNING — Empty DataFrame for eia/CALI — nothing written
+2026-05-31 13:51:12,413 — INFO — Starting ingestion — PJM (PJM Interconnection) for 2026-05-31T17
+2026-05-31 13:51:13,429 — INFO — Latest available hour for PJM: 2026-05-31T03
+2026-05-31 13:51:13,429 — INFO — PJM data is 14h behind — using latest available: 2026-05-31T03
+2026-05-31 13:51:13,429 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D31/region%3DPJM/hour%3D03/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b271b41a-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:13,469 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '6998'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:28 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF445E069248"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae6b77-b01e-0040-752e-f1a7c2000000'
+    'x-ms-client-request-id': 'b271b41a-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:12 GMT'
+2026-05-31 13:51:13,469 — INFO — File already exists for PJM 2026-05-31T03 — skipping
+2026-05-31 13:51:13,469 — INFO — Starting ingestion — MISO (Midcontinent ISO) for 2026-05-31T17
+2026-05-31 13:51:14,497 — INFO — Latest available hour for MISO: 2026-05-28T05
+2026-05-31 13:51:14,497 — INFO — MISO data is 84h behind — using latest available: 2026-05-28T05
+2026-05-31 13:51:14,498 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D28/region%3DMISO/hour%3D05/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b314c812-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:14,540 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7144'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:32 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF445FEEF65C"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae6cd5-b01e-0040-022e-f1a7c2000000'
+    'x-ms-client-request-id': 'b314c812-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:13 GMT'
+2026-05-31 13:51:14,541 — INFO — File already exists for MISO 2026-05-28T05 — skipping
+2026-05-31 13:51:14,541 — INFO — Starting ingestion — NYIS (New York ISO) for 2026-05-31T17
+2026-05-31 13:51:15,599 — INFO — Latest available hour for NYIS: 2026-05-31T03
+2026-05-31 13:51:15,600 — INFO — NYIS data is 14h behind — using latest available: 2026-05-31T03
+2026-05-31 13:51:15,601 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D31/region%3DNYIS/hour%3D03/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b3bd0324-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:15,643 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7042'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:35 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF4461BFB134"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae6dce-b01e-0040-472e-f1a7c2000000'
+    'x-ms-client-request-id': 'b3bd0324-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:14 GMT'
+2026-05-31 13:51:15,644 — INFO — File already exists for NYIS 2026-05-31T03 — skipping
+2026-05-31 13:51:15,644 — INFO — Starting ingestion — ISNE (ISO New England) for 2026-05-31T17
+2026-05-31 13:51:16,712 — INFO — Latest available hour for ISNE: 2026-05-28T04
+2026-05-31 13:51:16,713 — INFO — ISNE data is 85h behind — using latest available: 2026-05-28T04
+2026-05-31 13:51:16,713 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D28/region%3DISNE/hour%3D04/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b466d19c-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:16,754 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7047'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:38 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF4463D27F2C"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae6ece-b01e-0040-122e-f1a7c2000000'
+    'x-ms-client-request-id': 'b466d19c-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:15 GMT'
+2026-05-31 13:51:16,755 — INFO — File already exists for ISNE 2026-05-28T04 — skipping
+2026-05-31 13:51:16,755 — INFO — Starting ingestion — SWPP (Southwest Power Pool) for 2026-05-31T17
+2026-05-31 13:51:18,070 — INFO — Latest available hour for SWPP: 2026-05-31T04
+2026-05-31 13:51:18,071 — INFO — SWPP data is 13h behind — using latest available: 2026-05-31T04
+2026-05-31 13:51:18,072 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D31/region%3DSWPP/hour%3D04/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b5362a8c-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:18,113 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7035'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:42 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF4465FBF220"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae7003-b01e-0040-092e-f1a7c2000000'
+    'x-ms-client-request-id': 'b5362a8c-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:17 GMT'
+2026-05-31 13:51:18,113 — INFO — File already exists for SWPP 2026-05-31T04 — skipping
+2026-05-31 13:51:18,113 — INFO — Starting ingestion — BPAT (Bonneville Power Administration) for 2026-05-31T17
+2026-05-31 13:51:19,122 — INFO — Latest available hour for BPAT: 2026-05-31T06
+2026-05-31 13:51:19,122 — INFO — BPAT data is 11h behind — using latest available: 2026-05-31T06
+2026-05-31 13:51:19,124 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D31/region%3DBPAT/hour%3D06/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b5d691d4-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:19,167 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7025'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:45 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF44681F0A78"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae70f3-b01e-0040-5a2e-f1a7c2000000'
+    'x-ms-client-request-id': 'b5d691d4-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:18 GMT'
+2026-05-31 13:51:19,167 — INFO — File already exists for BPAT 2026-05-31T06 — skipping
+2026-05-31 13:51:19,168 — INFO — Starting ingestion — SOCO (Southern Company) for 2026-05-31T17
+2026-05-31 13:51:20,272 — INFO — Latest available hour for SOCO: 2026-05-20T05
+2026-05-31 13:51:20,272 — INFO — SOCO data is 276h behind — using latest available: 2026-05-20T05
+2026-05-31 13:51:20,274 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D20/region%3DSOCO/hour%3D05/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b6860dbc-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:20,325 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7201'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:49 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF446A253F50"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae71f3-b01e-0040-272e-f1a7c2000000'
+    'x-ms-client-request-id': 'b6860dbc-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:19 GMT'
+2026-05-31 13:51:20,326 — INFO — File already exists for SOCO 2026-05-20T05 — skipping
+2026-05-31 13:51:20,326 — INFO — Starting ingestion — TVA (Tennessee Valley Authority) for 2026-05-31T17
+2026-05-31 13:51:21,482 — INFO — Latest available hour for TVA: 2026-05-31T04
+2026-05-31 13:51:21,483 — INFO — TVA data is 13h behind — using latest available: 2026-05-31T04
+2026-05-31 13:51:21,484 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D31/region%3DTVA/hour%3D04/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b73eb88a-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:21,531 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7235'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:52 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF446C194D9C"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae7322-b01e-0040-0d2e-f1a7c2000000'
+    'x-ms-client-request-id': 'b73eb88a-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:20 GMT'
+2026-05-31 13:51:21,532 — INFO — File already exists for TVA 2026-05-31T04 — skipping
+2026-05-31 13:51:21,532 — INFO — Starting ingestion — DUK (Duke Energy Carolinas) for 2026-05-31T17
+2026-05-31 13:51:22,709 — INFO — Latest available hour for DUK: 2026-05-31T03
+2026-05-31 13:51:22,709 — INFO — DUK data is 14h behind — using latest available: 2026-05-31T03
+2026-05-31 13:51:22,710 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D31/region%3DDUK/hour%3D03/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b7f9c1c0-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:22,751 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7009'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:55 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF446E05A988"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae7490-b01e-0040-2d2e-f1a7c2000000'
+    'x-ms-client-request-id': 'b7f9c1c0-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:21 GMT'
+2026-05-31 13:51:22,752 — INFO — File already exists for DUK 2026-05-31T03 — skipping
+2026-05-31 13:51:22,752 — INFO — Starting ingestion — FPL (Florida Power and Light) for 2026-05-31T17
+2026-05-31 13:51:23,849 — INFO — Latest available hour for FPL: 2026-05-31T03
+2026-05-31 13:51:23,849 — INFO — FPL data is 14h behind — using latest available: 2026-05-31T03
+2026-05-31 13:51:23,850 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D31/region%3DFPL/hour%3D03/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b8a7c1da-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:23,892 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7072'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:42:59 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF44700E68A8"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae75c6-b01e-0040-282e-f1a7c2000000'
+    'x-ms-client-request-id': 'b8a7c1da-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:23 GMT'
+2026-05-31 13:51:23,893 — INFO — File already exists for FPL 2026-05-31T03 — skipping
+2026-05-31 13:51:23,893 — INFO — Starting ingestion — SC (South Carolina) for 2026-05-31T17
+2026-05-31 13:51:24,984 — INFO — Latest available hour for SC: 2026-05-31T03
+2026-05-31 13:51:24,984 — INFO — SC data is 14h behind — using latest available: 2026-05-31T03
+2026-05-31 13:51:24,985 — INFO — Request URL: 'https://energygridstoragetr.blob.core.windows.net/bronze/eia/year%3D2026/month%3D05/day%3D31/region%3DSC/hour%3D03/data.parquet'
+Request method: 'HEAD'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.29.0 Python/3.14.3 (macOS-15.6.1-arm64-arm-64bit-Mach-O)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b95505d4-5d21-11f1-b576-86bdff0df2f9'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2026-05-31 13:51:25,029 — INFO — Response status: 200
+Response headers:
+    'Content-Length': '7008'
+    'Content-Type': 'application/octet-stream'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 31 May 2026 18:43:02 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DEBF4471EC99D4"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b1ae76ff-b01e-0040-1f2e-f1a7c2000000'
+    'x-ms-client-request-id': 'b95505d4-5d21-11f1-b576-86bdff0df2f9'
+    'x-ms-version': 'REDACTED'
+    'x-ms-resource-type': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'x-ms-access-tier': 'REDACTED'
+    'x-ms-access-tier-inferred': 'REDACTED'
+    'x-ms-owner': 'REDACTED'
+    'x-ms-group': 'REDACTED'
+    'x-ms-permissions': 'REDACTED'
+    'x-ms-acl': 'REDACTED'
+    'Date': 'Sun, 31 May 2026 18:51:24 GMT'
+2026-05-31 13:51:25,030 — INFO — File already exists for SC 2026-05-31T03 — skipping
+2026-05-31 13:51:25,030 — INFO — ============================================================
+2026-05-31 13:51:25,030 — INFO — Ingestion complete — 0 success, 13 skipped, 0 errors
+2026-05-31 13:51:25,030 — INFO — ============================================================
+
+Final Summary:
+  Target hour : 2026-05-31T17:00:00+00:00
+  Success     : 0/13
+  Skipped     : 13
+  Errors      : 0
