@@ -338,12 +338,10 @@ class WeatherIngestor:
         Returns:
             Summary dictionary
         """
-        # Weather is real-time — use current hour not previous
-        # Open-Meteo has no publishing delay
+            # FIXED CODE — fetches previous hour, aligned with EIA
         if target_hour is None:
-            target_hour = datetime.now(timezone.utc).replace(
-                minute=0, second=0, microsecond=0
-            )
+            now         = datetime.now(timezone.utc)
+            target_hour = now.replace(minute=0, second=0, microsecond=0) - timedelta(hours=1)   # ← match EIA's target hour exactly
 
         logger.info("=" * 60)
         logger.info(
