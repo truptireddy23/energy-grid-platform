@@ -1,0 +1,6 @@
+last_completed_hour=2026-05-03T23:00:00+00:00
+eia_success=936
+eia_skipped=0
+weather_success=0
+weather_skipped=0
+errors=0
